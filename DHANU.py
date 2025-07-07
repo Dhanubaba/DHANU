@@ -150,19 +150,19 @@ for xd in range(5000):
 def DHANU3_MIX():
     vchrome = str(random.randint(100,925))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150))
     VAPP = random.randint(410000000,499999999)
-    END = '[FBAN/FB4A;FBAV/257.0.0.44.118;FBBV/197851400;FBDM/{density=2.25,width=720,height=1280};FBLC/en_US;FBRV/201443087;FBCR/ ;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S367VL;FBSV/9;FBOP/19;FBCA/armeabi-v7a:armeabi;]'
+    END = '[FBAN/FB4A;FBAV/269.0.0.50.127;FBBV/212783047;FBDM/{density=2.0,width=720,height=1424};FBLC/en_US;FBRV/0;FBCR/airtel;FBMF/LAVA;FBBD/LAVA;FBPN/com.facebook.katana;FBDV/Z92;FBSV/8.1.0;FBOP/11;FBCA/armeabi-v7a:armeabi;]'
     ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
     return ua
 
 
 def randBuildvsskj():
-    END = '[FBAN/FB4A;FBAV/267.1.0.46.120;FBBV/210653466;FBDM/{density=3.0,width=1080,height=2051};FBLC/en_US;FBRV/0;FBCR/Sprint;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-N975U;FBSV/10;FBOP/19;FBCA/arm64-v8a:;]'
+    END = '[FBAN/FB4A;FBAV/269.0.0.50.127;FBBV/212783074;FBDM/{density=2.625,width=1080,height=2069};FBLC/en_US;FBRV/0;FBCR/Verizon ;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-N976V;FBSV/10;FBOP/1;FBCA/arm64-v8a:;]'
     ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model3)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
     return ua
 
 def web():
 	a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";"
-	b = "[FBAN/FB4A;FBAV/266.0.0.64.124;FBBV/209629348;FBDM/{density=4.5,width=1440,height=2560};FBLC/en_US;FBRV/210561420;FBCR/AT&amp-T;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SAMSUNG-SM-G890A;FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+	b = "[FBAN/FB4A;FBAV/269.0.0.50.127;FBBV/212783075;FBDM/{density=3.375,width=1080,height=2058};FBLC/en_US;FBRV/214205475;FBCR/AT&amp-T;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-G960U;FBSV/10;FBOP/19;FBCA/arm64-v8a:;]"
 	ua = a+b
 	return ua    
     
