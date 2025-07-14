@@ -150,7 +150,7 @@ for xd in range(5000):
 def DHANU3_MIX():
     vchrome = str(random.randint(100,925))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150))
     VAPP = random.randint(410000000,499999999)
-    END = '[FBAN/FB4A;FBAV/269.0.0.50.127;FBBV/212783047;FBDM/{density=2.0,width=720,height=1424};FBLC/en_US;FBRV/0;FBCR/airtel;FBMF/LAVA;FBBD/LAVA;FBPN/com.facebook.katana;FBDV/Z92;FBSV/8.1.0;FBOP/11;FBCA/armeabi-v7a:armeabi;]'
+    END = '[FBAN/FB4A;FBAV/269.0.0.50.127;FBBV/212782869;FBDM/{density=2.0,width=1200,height=1831};FBLC/en_US;FBRV/213932784;FBCR/T-Mobile;FBMF/LGE;FBBD/lge;FBPN/com.facebook.katana;FBDV/LG-V521;FBSV/7.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]'
     ua = f'Dalvik/2.1.0 (Linux; U; Android {random.randint(4,13)}; {random.choice(model2)} Build/QP1A.{random.randint(111111,999999)}.{random.randint(111,999)}) '+END
     return ua
 
@@ -162,7 +162,7 @@ def randBuildvsskj():
 
 def web():
 	a = "[FBAN/FB4A;FBAV/"+str(random.randint(49,66))+'.0.0.'+str(random.randrange(20,49))+str(random.randint(11,99)) +";FBBV/"+str(random.randint(11111111,77777777))+";"
-	b = "[FBAN/FB4A;FBAV/269.0.0.50.127;FBBV/212783075;FBDM/{density=3.375,width=1080,height=2058};FBLC/en_US;FBRV/214205475;FBCR/AT&amp-T;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-G960U;FBSV/10;FBOP/19;FBCA/arm64-v8a:;]"
+	b = "[FBAN/FB4A;FBAV/268.1.0.54.121;FBBV/211681872;FBDM/{density=1.5,width=1200,height=1848};FBLC/en_US;FBRV/213532798;FBCR/;FBMF/LENOVO;FBBD/Lenovo;FBPN/com.facebook.katana;FBDV/Lenovo TB3-X70F;FBSV/6.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
 	ua = a+b
 	return ua    
     
